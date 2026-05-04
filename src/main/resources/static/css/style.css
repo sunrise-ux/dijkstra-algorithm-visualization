@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 30px;
+}
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+.two-columns {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.input-panel {
+    flex: 1;
+    min-width: 300px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+}
+.result-panel {
+    flex: 1;
+    min-width: 300px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+}
+.graph-container {
+    margin-top: 30px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 20px;
+    overflow-x: auto;
+}
+svg {
+    display: block;
+    margin: 0 auto;
+    background: #fafafa;
+    border-radius: 10px;
+}
+textarea {
+    width: 100%;
+    height: 300px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    resize: vertical;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+button:hover {
+    transform: translateY(-2px);
+}
+.result-info {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.path {
+    font-weight: bold;
+    color: #667eea;
+    word-break: break-all;
+}
+.distance {
+    font-size: 24px;
+    color: #4caf50;
+    font-weight: bold;
+}
+.error {
+    color: red;
+    padding: 10px;
+    background: #ffebee;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.example-btn {
+    background: #6c757d;
+    margin-top: 5px;
+}
+.clear-btn {
+    background: #dc3545;
+    margin-top: 10px;
+}

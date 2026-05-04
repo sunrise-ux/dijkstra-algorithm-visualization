@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгоритм Дейкстры — визуализация</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>📊 Алгоритм Дейкстры</h1>
+    <div class="subtitle">Поиск кратчайшего пути во взвешенном графе</div>
+
+    <div class="two-columns">
+        <div class="input-panel">
+            <h3>Входные данные</h3>
+            <label>Граф (JSON):</label>
+            <textarea id="graphInput" placeholder='{
+  "A": {"B": 4, "C": 2},
+  "B": {"A": 4, "D": 5},
+  "C": {"A": 2, "D": 8, "E": 10},
+  "D": {"B": 5, "C": 8, "F": 3},
+  "E": {"C": 10, "F": 4},
+  "F": {"D": 3, "E": 4}
+}'></textarea>
+
+            <label>Начальная вершина:</label>
+            <input type="text" id="startVertex" placeholder="A" value="">
+
+            <label>Конечная вершина:</label>
+            <input type="text" id="endVertex" placeholder="F" value="">
+
+            <button id="runBtn">Найти кратчайший путь</button>
+            <button id="exampleBtn" class="example-btn">Загрузить пример</button>
+            <button id="clearBtn" class="clear-btn">Очистить всё</button>
+        </div>
+
+        <div class="result-panel">
+            <h3>Результат</h3>
+            <div class="result-info">
+                <div><strong>Кратчайший путь:</strong> <span id="pathResult" class="path">—</span></div>
+                <div><strong>Длина пути:</strong> <span id="distanceResult" class="distance">—</span></div>
+                <div><strong>Расстояния до всех вершин:</strong></div>
+                <pre id="distancesResult" style="background:#fff; padding:10px; border-radius:5px; overflow-x:auto;">—</pre>
+                <div><strong>Порядок посещения:</strong> <span id="visitedOrder">—</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="graph-container">
+        <h3>Визуализация графа</h3>
+        <svg id="graphSvg" width="800" height="500" viewBox="0 0 800 500"></svg>
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
